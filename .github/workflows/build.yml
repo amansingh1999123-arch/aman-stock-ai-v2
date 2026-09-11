@@ -23,8 +23,7 @@ jobs:
           gradle-version: '8.7'
 
       - name: Build Debug APK
-        run: gradle assembleDebug --stacktrace --info
-
+        run:  gradle assembleDebug -Pandroid.useAndroidX=true -Pandroid.enableJetifier=true --stacktrace --info
       - name: List all APK files
         if: always()
         run: find . -name "*.apk" -type f
