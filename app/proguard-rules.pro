@@ -1,1 +1,1 @@
-# Keep default
+# Default ProGuard rules
